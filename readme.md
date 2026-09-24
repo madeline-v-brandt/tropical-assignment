@@ -73,7 +73,7 @@ Because runtimes at these scales can be noisy, the results below report mean run
 
 ![Runtime comparison](figures/solver-comparison.png)
 
- At \(n=7\), subset DP was approximately 312 times faster than naive recursion, while linear_sum_assignment was 27 times faster than subset DP.
+ At $n=7$, subset DP was approximately 312 times faster than naive recursion, while linear_sum_assignment was 27 times faster than subset DP.
 
 The naive tropical method is initially fast because it has very little computational overhead, but its factorial growth quickly becomes prohibitive. Memoizing repeated subproblems changes the scaling dramatically: the tropical subset DP has complexity $O(n2^n)$ rather than $O(n!)$, allowing it to solve substantially larger instances.
 
@@ -85,7 +85,7 @@ The subset DP improves on naive recursion by avoiding repeated subproblems, but 
 
 ![Runtime as a function of assignment density](figures/sparsity-experiment.png)
 
-At density \(d=0.2\), feasibility-aware DP reduced median runtime from 0.005425 seconds to 0.000140 seconds, while the two methods converged as density approached 1.
+At density $d=0.2$, feasibility-aware DP reduced median runtime from 0.005425 seconds to 0.000140 seconds, while the two methods converged as density approached 1.
 
 Simply introducing sparse structure did not improve the ordinary tropical DP because the algorithm continued to evaluate infeasible transitions. Explicitly pruning forbidden assignments substantially improved performance on sparse instances, with the advantage disappearing as density approached one.
 
