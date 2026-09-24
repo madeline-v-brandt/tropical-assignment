@@ -24,7 +24,7 @@ a \odot b = a+b.
 To see the connection, let $X=(x_{ij})$ be an $n\times n$ matrix. Its classical permanent is
 
 ```math
-\operatorname{perm}(X)
+\mathrm{perm}(X)
 =
 \sum_{\sigma\in S_n}
 \prod_{i=1}^n x_{i,\sigma(i)}.
@@ -33,7 +33,7 @@ To see the connection, let $X=(x_{ij})$ be an $n\times n$ matrix. Its classical 
 Replacing classical addition by minimum and multiplication by addition gives the **tropical permanent**
 
 ```math
-\operatorname{tropperm}(X)
+\mathrm{tropperm}(X)
 =
 \min_{\sigma\in S_n}
 \sum_{i=1}^n x_{i,\sigma(i)}.
