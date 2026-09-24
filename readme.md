@@ -15,29 +15,29 @@ Imagine $n$ workers and $n$ jobs, and let $x_{ij}$ be the cost of assigning work
 
 This objective has a natural interpretation in **tropical (min-plus) algebra**. In ordinary arithmetic, the basic operations are addition and multiplication. In the min-plus setting, these are replaced by
 
-$$
+```math
 a \oplus b = \min(a,b),
 \qquad
 a \odot b = a+b.
-$$
+```
 
 To see the connection, let $X=(x_{ij})$ be an $n\times n$ matrix. Its classical permanent is
 
-$$
+```math
 \operatorname{perm}(X)
 =
 \sum_{\sigma\in S_n}
 \prod_{i=1}^n x_{i,\sigma(i)}.
-$$
+```
 
 Replacing classical addition by minimum and multiplication by addition gives the **tropical permanent**
 
-$$
+```math
 \operatorname{tropperm}(X)
 =
 \min_{\sigma\in S_n}
 \sum_{i=1}^n x_{i,\sigma(i)}.
-$$
+```
 
 This is exactly the optimal value of the assignment problem. In other words, a fundamental problem in combinatorial optimization can be viewed as evaluating a tropical analogue of a familiar matrix invariant.
 
@@ -99,9 +99,9 @@ The goal is not to reconstruct Chicago's actual taxi dispatch system, but to for
 
 For a selected time, I construct a set of available taxis using the ending locations of previous trips and a set of pickup requests using the starting locations of subsequent trips. This produces a cost matrix
 
-$$
+```math
 c_{ij} = \text{distance from available taxi } i \text{ to pickup request } j.
-$$
+```
 
 Distances are calculated using the Haversine formula, which gives straight-line geographic distance between latitude/longitude coordinates. Solving the resulting assignment problem with scipy.optimize.linear_sum_assignment then finds the one-to-one matching that minimizes total repositioning distance.
 
