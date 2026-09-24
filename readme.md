@@ -147,4 +147,8 @@ Reusable solver implementations are contained in `src/solvers.py`.
 
 Install dependencies with:
 
+```bash
     pip install -r requirements.txt
+```
+
+See [`data/README.md`](data/README.md) for instructions on obtaining and preparing the Chicago taxi data.
