@@ -9,9 +9,9 @@ I investigate this question through the assignment problem, beginning with its i
 
 Imagine $n$ workers and $n$ jobs, and let $x_{ij}$ be the cost of assigning worker $i$ to job $j$. Each worker must be assigned to exactly one job and each job to exactly one worker, so an assignment corresponds to a permutation $\sigma \in S_n$. The assignment problem is to find the permutation that minimizes the total cost:
 
-$$
+```math
 \min_{\sigma \in S_n} \sum_{i=1}^n x_{i,\sigma(i)}.
-$$
+```
 
 This objective has a natural interpretation in **tropical (min-plus) algebra**. In ordinary arithmetic, the basic operations are addition and multiplication. In the min-plus setting, these are replaced by
 
